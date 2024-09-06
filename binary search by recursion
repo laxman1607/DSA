@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+void  binarysearch(int arr[],int target,int s,int e){
+    if (e<s){
+        cout<<"not found";
+    }
+ 
+    int mid=s+((e-s)/2);
+    
+    if(arr[mid]!=target){
+        if(arr[mid]>target){
+            return binarysearch(arr,target,s,mid-1);
+        }
+        return binarysearch(arr,target,mid+1,e);
+        
+    }
+    else{
+        cout<<mid;
+    }
+    
+
+    
+}
+int main (){
+    int arr[5]={1,2,3,4,5};
+   
+    binarysearch(arr,2,0,4);
+
+
+}
