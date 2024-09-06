@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+void  linearsearch(int arr[],int target,int arraysize,int i=0){
+    if(i>=arraysize){
+        cout<<"not found";
+    }
+    
+    else if (arr[i]==target){
+        cout<<i;
+        }
+       
+
+    else{
+    return  linearsearch(arr, target,arraysize, i=i+1);
+    }
+}
+int main (){
+    int arr[5]={1,2,3,4,5};
+    int arraysize =5;
+    linearsearch(arr,4,arraysize);
+
+
+}
